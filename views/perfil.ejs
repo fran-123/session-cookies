@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body class="<%= locals.userColor ? locals.userColor.colors : null %>">
+    <main>
+        <h2>hola <strong><%= locals.userLogin.name%></strong>, eligiste el color <strong><%= locals.userLogin.colors%> <br> tu email es <strong><%= locals.userLogin.email%></strong> y tu edad es <strong><%= locals.userLogin.edad%></strong></h2>
+        <a href="/user/check">salir</a>
+        
+        <a href="/user/olvidar">olvidar color</a>
+    </main>
+</body>
+</html>

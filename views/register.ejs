@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="" method="POST">
+            <div>
+                <label for="name">Ingrese Su Nombre</label>
+                <input type="text" name="name" id="name">
+                <span><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+            </div>
+            <div>
+                <label for="email">Ingrese Su Email</label>
+                <input type="email" name="email" id="email">
+                <span><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+            </div>
+            <div>
+                <label for="edad">Ingrese Su Edad</label>
+                <input type="number" name="edad" id="edad">
+                <span><%= locals.errors && errors.edad ? errors.edad.msg : null %></span>
+            </div>
+            <div>
+                <select name="colors" id="">
+                    <option value="" hidden>selecciona un color</option>
+                    <option value="red">Rojo</option>
+                    <option value="blue">Azul</option>
+                    <option value="green">Verde</option>
+                </select>
+                <span><%= locals.errors && errors.colors ? errors.colors.msg : null %></span>
+            </div>
+
+            <button type="submit">Registrarme</button>
+        </form>
+    </main>
+</body>
+</html>

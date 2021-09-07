@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="<%= locals.userColor ? locals.userColor.colors : null %>">
+    <main>
+        <form action="" method="POST">
+            <div>
+                <label for="name">Ingrese Su Nombre</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="email">Ingrese Su Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="recordar">recordar color</label>
+                <input type="checkbox" name="recordar" id="recordar">
+            </div>
+            
+            <span><%= locals.errors && errors.email || locals.errors && errors.name ? errors.email.msg : null %></span>
+
+            <button type="submit">ingresar</button>
+        </form>
+    </main>
+</body>
+</html>
