@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Document</title>
 </head>
-<body>
+<body class=" register <%= locals.userLogin ? locals.userLogin.colors : null %>">
     <main>
         <form action="" method="POST">
             <div>
@@ -32,6 +34,11 @@
                     <option value="green">Verde</option>
                 </select>
                 <span><%= locals.errors && errors.colors ? errors.colors.msg : null %></span>
+            </div>
+
+            <div>
+                <label class="recordar" for="recordar">recordar color</label>
+                <input type="checkbox" name="recordar" id="recordar">
             </div>
 
             <button type="submit">Registrarme</button>

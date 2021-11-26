@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Document</title>
 </head>
-<body class="<%= locals.userColor ? locals.userColor.colors : null %>">
+<body class="<%= locals.userLogin ? locals.userLogin.colors : null %>">
     <main>
         <h2>hola <strong><%= locals.userLogin.name%></strong>, eligiste el color <strong><%= locals.userLogin.colors%> <br> tu email es <strong><%= locals.userLogin.email%></strong> y tu edad es <strong><%= locals.userLogin.edad%></strong></h2>
         <a href="/user/check">salir</a>

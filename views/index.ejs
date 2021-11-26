@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/index.css">
   <title>Document</title>
 </head>
-<body>
+<body class="index <%= locals.userLogin ? locals.userLogin.colors : null %>">
   <header>
     <nav>
       <ul>
         <li><a href="/user/register">ir al register</a></li>
-        <li><a href="/user/login">ir al login</a></li>
       </ul>
     </nav>
   </header>
